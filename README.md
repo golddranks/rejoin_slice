@@ -5,8 +5,8 @@ It is useful for rejoining slices that are split from the same slice,
 but need to be processed as a continous slice later:
 ```
 let mut values: Vec<_> = util_lib::split_by_streak("aaaaaaabbbbbbbcccccccddddeeeeeeefffggggggggh");
-let last_two = rejoin_str(&values[values.len()-2], &values[values.len()-1]);
-assert_eq!("ggggggggh", last_two);
+let last_two = &values[values.len()-2].rejoin(&values[values.len()-1]);
+assert_eq!(&"ggggggggh", last_two);
 ```
 ## Notes about safety
 This crate internally uses `unsafe` to achieve its functionality.
