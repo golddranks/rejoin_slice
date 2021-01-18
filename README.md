@@ -10,7 +10,7 @@ assert_eq!(&"ggggggggh", last_two);
 ```
 ## Notes about safety.
 The API provided by this crate is not sound; I've yanked the published versions.
-I wrote this crate as a sample/experiment for a Rust RFC that was discussed at the time: rust-lang/rfcs#2806
+I wrote this crate as a sample/experiment for a Rust RFC that was discussed at the time: https://github.com/rust-lang/rfcs/pull/2806
 Please refer to that discussion for why it isn't sound.
 
 ## (Old, misguided) Notes about safety
