@@ -8,9 +8,14 @@ let mut values: Vec<_> = util_lib::split_by_streak("aaaaaaabbbbbbbcccccccddddeee
 let last_two = &values[values.len()-2].rejoin(&values[values.len()-1]);
 assert_eq!(&"ggggggggh", last_two);
 ```
-## Notes about safety
+## Notes about safety.
+The API provided by this crate is not sound; I've yanked the published versions.
+I wrote this crate as a sample/experiment for a Rust RFC that was discussed at the time: rust-lang/rfcs#2806
+Please refer to that discussion for why it isn't sound.
+
+## (Old, misguided) Notes about safety
 This crate internally uses `unsafe` to achieve its functionality.
-However, it provides a safe interface.
+<s>However, it provides a safe interface.</s>
 It takes the following precautions for safety:
 1. Pointer arithmetic is never explicitly performed. A pointer pointing to
 the end of the first slice is calculated using safe API's.
